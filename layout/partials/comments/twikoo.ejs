@@ -1,0 +1,16 @@
+<div class="post-comments">
+  <div class="section-header">
+    <span class="section-label">COMMENTS</span>
+    <h3 class="section-title">评论区</h3>
+  </div>
+  <div id="twikoo"></div>
+  <script src="https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js"></script>
+  <script>
+    twikoo.init({
+      envId: '<%= theme.comments.twikoo.envId %>',
+      el: '#twikoo',
+      region: '<%= theme.comments.twikoo.region %>',
+      path: '<%= page.path %>'
+    });
+  </script>
+</div>
