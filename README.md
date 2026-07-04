@@ -1,4 +1,4 @@
-# hexo-theme-modernduang
+# Modern Duang
 
 一款简洁优雅的 [Hexo](https://hexo.io/) 博客主题，采用柔和的 Claymorphism 设计风格。
 
