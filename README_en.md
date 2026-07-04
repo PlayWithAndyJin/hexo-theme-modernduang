@@ -1,4 +1,4 @@
-# hexo-theme-modernduang
+# Modern Duang
 
 A clean and elegant [Hexo](https://hexo.io/) blog theme with soft claymorphism design style.
 
