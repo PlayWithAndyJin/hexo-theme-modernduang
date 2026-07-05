@@ -1,6 +1,10 @@
-# Modern Duang
+<h1 style="text-align: center">Modern Duang</h1>
 
-一款简洁优雅的 [Hexo](https://hexo.io/) 博客主题，采用柔和的 Claymorphism 设计风格。
+<p align="center"><img src="logo.png" width="120" alt="logo" /></p>
+
+<p style="text-align: center"><a href="https://themeblog.andyjin.website">主题博客</a> | <a href="https://theme.andyjin.website/zh/index.html">中文指南</a> | <a href="./README_en.md">English README</a></p>
+
+一款简洁优雅的 [Hexo](https://hexo.io/) 博客主题，采用柔和的 Claymorphism 设计风格。 
 
 ![screenshot](screenshot.png)
 
