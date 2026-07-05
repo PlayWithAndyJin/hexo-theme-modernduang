@@ -1,4 +1,8 @@
-# Modern Duang
+<h1 style="text-align: center">Modern Duang</h1>
+
+<p align="center"><img src="logo.png" width="120" alt="logo" /></p>
+
+<p style="text-align: center"><a href="https://themeblog.andyjin.website">Theme Blog</a> |  <a href="https://theme.andyjin.website">English Instruction</a> | <a href="./README.md">简体中文 README</a></p>
 
 A clean and elegant [Hexo](https://hexo.io/) blog theme with soft claymorphism design style.
 
