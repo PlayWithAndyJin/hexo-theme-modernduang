@@ -2,6 +2,16 @@
 
 <p align="center"><img src="logo.png" width="120" alt="logo" /></p>
 
+<p align="center">
+<a title="Hexo Version" target="_blank" href="https://hexo.io/zh-cn/"><img alt="Hexo Version" src="https://img.shields.io/badge/Hexo-%3E%3D%206.0-blue?style=flat"></a>
+<a title="Node Version" target="_blank" href="https://nodejs.org/zh-cn/"><img alt="Node Version" src="https://img.shields.io/badge/Node-%3E%3D%2014.21.3-green?style=flat"></a>
+<a title="License" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang/LICENSE"><img alt="License" src="https://img.shields.io/github/license/PlayWithAndyJin/hexo-theme-modernduang.svg?style=flat"></a>
+<br>
+<a title="GitHub Release" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/PlayWithAndyJin/hexo-theme-modernduang?style=flat"></a>
+<a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-modernduang"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-modernduang?color=red&label=npm"></a>
+<a title="GitHub Commits" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/PlayWithAndyJin/hexo-theme-modernduang.svg?style=flat&color=purple&label=commits"></a>
+</p>
+
 <p align="center"><a href="https://themeblog.andyjin.website">Theme Blog</a> |  <a href="https://theme.andyjin.website">English Instruction</a> | <a href="./README.md">简体中文 README</a></p>
 
 <p align="center">A clean and elegant <a href="https://hexo.io/">Hexo</a> blog theme with soft claymorphism design style.</p>
