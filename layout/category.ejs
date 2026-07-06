@@ -1,0 +1,18 @@
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">CATEGORY</span>
+      <h2 class="section-title"><%= page.category %></h2>
+    </div>
+    
+    <div class="cloud-posts">
+      <% var ci = 0; page.posts.forEach(function(post) { if (!is_visible(post)) return; %>
+        <a href="<%- url_for(post.path) %>" class="cloud-card cloud-float-<%= ci++ % 5 + 1 %>">
+          <span class="cloud-card-date"><%= date(post.date, 'MM-DD') %></span>
+          <h3 class="cloud-card-title"><%= post.title %></h3>
+          <span class="cloud-card-arrow">→</span>
+        </a>
+      <% }) %>
+    </div>
+  </div>
+</section>

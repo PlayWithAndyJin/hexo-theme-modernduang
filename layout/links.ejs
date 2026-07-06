@@ -1,0 +1,95 @@
+<section class="links-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">LINKS</span>
+      <h2 class="section-title">友情链接</h2>
+      <p class="section-desc">我的朋友们</p>
+    </div>
+    
+    <%
+      var linkColors = ['pink', 'blue', 'mint', 'lilac', 'yellow'];
+      var friendGroups = theme.friendGroups || {};
+
+      // 处理友链数据，支持分类
+      var linkGroups = {};
+      var friends = theme.friends || [];
+      if (friends.length) {
+        friends.forEach(function(link) {
+          var group = link.group || '默认分组';
+          if (!linkGroups[group]) linkGroups[group] = [];
+          linkGroups[group].push(link);
+        });
+      }
+    %>
+
+    <% if (Object.keys(linkGroups).length > 0) { %>
+      <% Object.keys(linkGroups).forEach(function(group, groupIndex) { %>
+        <div class="link-group">
+          <h3 class="link-group-title">
+            <span class="link-group-icon"><%- friendGroups[group] || '📁' %></span>
+            <%= group %>
+            <span class="link-group-count"><%= linkGroups[group].length %> 位</span>
+          </h3>
+          <div class="links-grid">
+            <% linkGroups[group].forEach(function(link, index) { %>
+              <a href="<%= link.url %>" target="_blank" rel="noopener noreferrer" class="link-card link-color-<%= linkColors[index % linkColors.length] %>">
+                <div class="link-avatar">
+                  <% if (link.avatar) { %>
+                    <img src="<%= link.avatar %>" alt="<%= link.name %>" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <span class="link-avatar-placeholder" style="display:none;"><%= link.name.charAt(0) %></span>
+                  <% } else { %>
+                    <span class="link-avatar-placeholder"><%= link.name.charAt(0) %></span>
+                  <% } %>
+                </div>
+                <div class="link-info">
+                  <h4 class="link-name"><%= link.name %></h4>
+                  <p class="link-desc"><%= link.desc || '' %></p>
+                </div>
+              </a>
+            <% }) %>
+          </div>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <div class="links-empty">
+        <p>暂无友链，欢迎交换~</p>
+        <p class="links-contact">欢迎在评论区留言交换友链~</p>
+      </div>
+    <% } %>
+    
+    <!-- 交换友链 -->
+    <%
+      var linkApply = link_apply_content();
+    %>
+    <div class="link-apply">
+      <% if (linkApply.title) { %>
+        <div class="link-apply-header">
+          <h3 class="link-apply-title"><%= linkApply.title %></h3>
+        </div>
+      <% } %>
+
+      <div class="link-apply-content">
+        <div class="link-apply-section">
+          <%- linkApply.content %>
+        </div>
+      </div>
+      
+      <!-- 评论区 -->
+      <% if (theme.comments.enable !== false) { %>
+      <div class="link-comments">
+        <div id="twikoo"></div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<% if (theme.comments.enable !== false && theme.comments.twikoo.envId) { %>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.13/dist/twikoo.all.min.js" integrity="sha384-gx/djtjVrmrakPOiSOMOo9lJtaO1SHYvIf8rsTh1effe6s/uy91OMOQaMhXPQkCB" crossorigin="anonymous"></script>
+<script>
+  twikoo.init({
+    envId: '<%= theme.comments.twikoo.envId %>',
+    el: '#twikoo'
+  });
+</script>
+<% } %>
