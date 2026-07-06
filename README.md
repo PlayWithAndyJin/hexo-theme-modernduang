@@ -17,7 +17,7 @@
 
 <p align="center">一款简洁优雅的 <a href="https://hexo.io/">Hexo</a> 博客主题，采用柔和的 Claymorphism 设计风格。</p>
 
-![screenshot](screenshot.png)
+![sample](./samples/home-hero.png)
 
 ## 特性
 
@@ -37,6 +37,28 @@
 - **自定义页脚** — 支持自定义 HTML 内容、内置社交图标及自定义社交图标
 - **文章可见性** — 支持文章前台隐藏或全局隐藏
 - **RSS 支持** — 头部内置 RSS 链接，支持 RSS 图标
+
+## 样图
+
+| 首页 Hero | 最新文章 | 年度计划 |
+|-----------|---------|----------|
+| ![hero](./samples/home-hero.png) | ![latest](./samples/home-latest-article.png) | ![plan](./samples/home-plan.png) |
+
+| 站点数据 | 博客文章 |
+|---------|---------|
+| ![stats](./samples/home-site-data.png) | ![blog](./samples/blog.png) |
+
+| 归档 | 分类 | 标签 |
+|------|------|------|
+| ![archive](./samples/archive.png) | ![categories](./samples/categories.png) | ![tags](./samples/tags.png) |
+
+| 分类详情 | 标签详情 |
+|---------|---------|
+| ![category](./samples/category-detail.png) | ![tag](./samples/tag-detail.png) |
+
+| 友链 | 关于 |
+|------|------|
+| ![links](./samples/links.png) | ![about](./samples/about.png) |
 
 ## 安装
 
