@@ -10,9 +10,10 @@
 <a title="GitHub Release" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/PlayWithAndyJin/hexo-theme-modernduang?style=flat"></a>
 <a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-modernduang"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-modernduang?color=red&label=npm"></a>
 <a title="GitHub Commits" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/PlayWithAndyJin/hexo-theme-modernduang.svg?style=flat&color=purple&label=commits"></a>
+<a title="Agent Skills" target="_blank" href="hhttps://github.com/PlayWithAndyJin/modernduang-skills"><img alt="Agent Skills" src="https://img.shields.io/badge/skills-2-orange?style=flat"></a>
 </p>
 
-<p align="center"><a href="https://themeblog.andyjin.website">主题博客</a> | <a href="https://theme.andyjin.website/zh/index.html">中文指南</a> | <a href="./README_en.md">English README</a></p>
+<p align="center"><a href="https://themeblog.andyjin.website">主题博客</a> | <a href="https://theme.andyjin.website/zh/index.html">中文指南</a> | <a href="./README_en.md">English README</a> | <a href="https://github.com/PlayWithAndyJin/modernduang-skills">Agent Skills</a></p>
 
 <p align="center">一款简洁优雅的 <a href="https://hexo.io/">Hexo</a> 博客主题，采用柔和的 Claymorphism 设计风格。</p>
 
@@ -39,6 +40,8 @@
 
 ## 安装
 
+> 要求：Node.js >= 14.0.0，Hexo >= 6.0.0
+
 ```bash
 cd your-site
 npm install hexo-theme-modernduang --save
@@ -49,6 +52,27 @@ npm install hexo-theme-modernduang --save
 ```yaml
 theme: modernduang
 ```
+
+> 如果你的 Hexo 版本低于 6.0，需额外执行：`cp -r node_modules/hexo-theme-modernduang themes/modernduang`
+
+## Claude Code 技能
+
+主题配套了 Claude Code Agent Skills，安装后即可用 AI 配置和自定义主题：
+
+```bash
+# 安装全部技能
+npx skills add PlayWithAndyJin/modernduang-skills --all
+
+# 或单独安装
+npx skills add PlayWithAndyJin/modernduang-skills --skill modernduang-theme-setup
+```
+
+- `modernduang-theme-setup` — 帮你安装、配置、排查主题
+- `modernduang-theme-custom` — 告诉你每个源文件的作用，按需修改
+
+> 技能仓库：[PlayWithAndyJin/modernduang-skills](https://github.com/PlayWithAndyJin/modernduang-skills)
+
+之后在 Claude Code 中直接说「帮我配置 Modern Duang 主题」即可。
 
 ## 配置
 
