@@ -1,0 +1,116 @@
+#=============================
+# Hexo Theme Modern Duang
+#=============================
+
+favicon: /img/logo.png
+
+# 导航菜单
+# 内置图标: 首页, 归档, 标签, 分类, 友链, 开往, 关于
+# 自定义图标: 直接填写 SVG 代码字符串
+# external: true 表示在新窗口打开
+menu:
+  首页: /
+  归档: /archives
+  标签: /tags
+  分类: /categories
+  友链: /links
+  开往:
+    url: https://www.travellings.cn/go.html
+    external: true
+  关于: /about
+
+dark_mode:
+  enable: true
+  default: light
+
+font:
+  enable: true
+  host: https://fonts.googleapis.com
+  global:
+    external: true
+    families:
+      - Fredoka:wght@400;500;600;700
+      - Nunito:wght@300;400;500;600;700
+      - JetBrains+Mono:wght@400;500
+
+# 评论系统（目前仅支持 Twikoo）
+comments:
+  enable: true # 评论区全局开关
+  twikoo:
+    envId: ''
+    region: 'ap-shanghai'
+
+# 页脚
+footer:
+  since: 
+  author: ''
+  powered: true
+  social:
+    travelling: true
+    github: true
+    email: false
+    custom: []
+  custom: ''
+  beian:
+    icp: ''
+    moe: ''
+    chabei: ''
+
+# 友链页站点信息
+siteInfo:
+  url: ''
+  avatar: ''
+  atom: ''
+
+# 首页副标题
+# mode: fixed - 固定显示 / random - 随机显示
+hero:
+  mode: fixed
+  text: 欢迎来到我的博客
+  texts:
+    - 欢迎来到我的博客
+    - 用文字记录思考，用代码改变世界
+
+# 年度计划
+plans: []
+
+# 个人信息
+profile:
+  avatar: ''
+  motto: ''
+  social: []
+
+# 友链分组（名称和图标）
+friendGroups:
+  主题相关: 🎨
+
+# 标签页配置
+tags:
+  icon: ''
+
+# 分类页配置（按分类名称匹配，未配置的使用默认样式）
+categories: {}
+
+# 友链列表
+friends:
+  - name: Modern Duang Blog
+    url: https://themeblog.andyjin.website
+    desc: 我的主题的博客
+    avatar: https://wmimg.com/i/1769/2026/07/6a4a5b4c721df.png
+    group: 主题相关
+  - name: Modern Duang Docs
+    url: https://theme.andyjin.website/zh/index.html
+    desc: 我的主题的指南
+    avatar: https://wmimg.com/i/1769/2026/07/6a4a5b4c721df.png
+    group: 主题相关
+  - name: Modern Duang Repo
+    url: https://github.com/PlayWithAndyJin/hexo-theme-modernduang
+    desc: 我的主题的仓库
+    avatar: https://wmimg.com/i/1769/2026/07/6a4a5b4c721df.png
+    group: 主题相关
+
+# 站点数据（首页展示）
+siteStats:
+  enable: false  # 是否显示站点数据模块
+  # 站点起始日期
+  startDate: '2024-01-01'
