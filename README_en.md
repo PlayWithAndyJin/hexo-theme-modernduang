@@ -17,7 +17,7 @@
 
 <p align="center">A clean and elegant <a href="https://hexo.io/">Hexo</a> blog theme with soft claymorphism design style.</p>
 
-![screenshot](screenshot.png)
+![sample](./samples/home-hero.png)
 
 ## Features
 
@@ -37,6 +37,28 @@
 - **Post Visibility** — Hide posts from listings or globally with 404
 - **Custom Footer** — Support custom HTML content, built-in and custom social icons
 - **RSS Support** — Built-in RSS link in head and configurable RSS icon
+
+## Samples
+
+| Home Hero | Latest Posts | Annual Plan |
+|-----------|-------------|-------------|
+| ![hero](./samples/home-hero.png) | ![latest](./samples/home-latest-article.png) | ![plan](./samples/home-plan.png) |
+
+| Site Stats | Blog Post |
+|-----------|-----------|
+| ![stats](./samples/home-site-data.png) | ![blog](./samples/blog.png) |
+
+| Archive | Categories | Tags |
+|---------|-----------|------|
+| ![archive](./samples/archive.png) | ![categories](./samples/categories.png) | ![tags](./samples/tags.png) |
+
+| Category Detail | Tag Detail |
+|----------------|-----------|
+| ![category](./samples/category-detail.png) | ![tag](./samples/tag-detail.png) |
+
+| Friend Links | About |
+|-------------|-------|
+| ![links](./samples/links.png) | ![about](./samples/about.png) |
 
 ## Installation
 
