@@ -10,7 +10,7 @@
 <a title="GitHub Release" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/PlayWithAndyJin/hexo-theme-modernduang?style=flat"></a>
 <a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-modernduang"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-modernduang?color=red&label=npm"></a>
 <a title="GitHub Commits" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/PlayWithAndyJin/hexo-theme-modernduang.svg?style=flat&color=purple&label=commits"></a>
-<a title="Agent Skills" target="_blank" href="hhttps://github.com/PlayWithAndyJin/modernduang-skills"><img alt="Agent Skills" src="https://img.shields.io/badge/skills-2-orange?style=flat"></a>
+<a title="Agent Skills" target="_blank" href="https://github.com/PlayWithAndyJin/modernduang-skills"><img alt="Agent Skills" src="https://img.shields.io/badge/skills-2-orange?style=flat"></a>
 </p>
 
 <p align="center"><a href="https://themeblog.andyjin.website">主题博客</a> | <a href="https://theme.andyjin.website/zh/index.html">中文指南</a> | <a href="./README_en.md">English README</a> | <a href="https://github.com/PlayWithAndyJin/modernduang-skills">Agent Skills</a></p>
@@ -56,9 +56,9 @@
 |---------|---------|
 | ![category](./samples/category-detail.png) | ![tag](./samples/tag-detail.png) |
 
-| 友链 | 关于 |
-|------|------|
-| ![links](./samples/links.png) | ![about](./samples/about.png) |
+| 友链 | 友链详情 | 关于 |
+|------|---------|------|
+| ![links](./samples/links.png) | ![friend](./samples/friend.png) | ![about](./samples/about.png) |
 
 ## 安装
 
