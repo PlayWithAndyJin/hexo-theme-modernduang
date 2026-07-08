@@ -72,6 +72,7 @@ hero:
     - 用文字记录思考，用代码改变世界
 
 # 年度计划
+# 每项包含: text(名称) done(是否完成) current(当前进度) final(目标总数)
 plans: []
 
 # 个人信息
@@ -89,6 +90,7 @@ tags:
   icon: ''
 
 # 分类页配置（按分类名称匹配，未配置的使用默认样式）
+# 每项: desc(描述) icon(SVG) color(背景色) textColor(图标色)
 categories: {}
 
 # 友链列表
@@ -98,6 +100,7 @@ friends:
     desc: 我的主题的博客
     avatar: https://wmimg.com/i/1769/2026/07/6a4a5b4c721df.png
     group: 主题相关
+    rss: https://themeblog.andyjin.website/atom.xml
   - name: Modern Duang Docs
     url: https://theme.andyjin.website/zh/index.html
     desc: 我的主题的指南
