@@ -1,6 +1,6 @@
 <h1 align="center">Modern Duang</h1>
 
-<p align="center"><img src="logo.png" width="120" alt="logo" /></p>
+<p align="center"><img src="./samples/logo.png" width="120" alt="logo" /></p>
 
 <p align="center">
 <a title="Hexo Version" target="_blank" href="https://hexo.io/zh-cn/"><img alt="Hexo Version" src="https://img.shields.io/badge/Hexo-%3E%3D%206.0-blue?style=flat"></a>
@@ -10,7 +10,7 @@
 <a title="GitHub Release" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/PlayWithAndyJin/hexo-theme-modernduang?style=flat"></a>
 <a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-modernduang"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-modernduang?color=red&label=npm"></a>
 <a title="GitHub Commits" target="_blank" href="https://github.com/PlayWithAndyJin/hexo-theme-modernduang"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/PlayWithAndyJin/hexo-theme-modernduang.svg?style=flat&color=purple&label=commits"></a>
-<a title="Agent Skills" target="_blank" href="hhttps://github.com/PlayWithAndyJin/modernduang-skills"><img alt="Agent Skills" src="https://img.shields.io/badge/skills-2-orange?style=flat"></a>
+<a title="Agent Skills" target="_blank" href="https://github.com/PlayWithAndyJin/modernduang-skills"><img alt="Agent Skills" src="https://img.shields.io/badge/skills-2-orange?style=flat"></a>
 </p>
 
 <p align="center"><a href="https://themeblog.andyjin.website">Theme Blog</a> |  <a href="https://theme.andyjin.website">English Instruction</a> | <a href="./README.md">简体中文 README</a> | <a href="https://github.com/PlayWithAndyJin/modernduang-skills">Agent Skills</a></p>
@@ -56,9 +56,9 @@
 |----------------|-----------|
 | ![category](./samples/category-detail.png) | ![tag](./samples/tag-detail.png) |
 
-| Friend Links | About |
-|-------------|-------|
-| ![links](./samples/links.png) | ![about](./samples/about.png) |
+| Friend Links | Friend Detail | About |
+|-------------|--------------|-------|
+| ![links](./samples/links.png) | ![friend](./samples/friend.png) | ![about](./samples/about.png) |
 
 ## Installation
 
