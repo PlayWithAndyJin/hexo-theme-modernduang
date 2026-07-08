@@ -1,0 +1,16 @@
+<% if (theme.comments.enable !== false && page.comment !== false && theme.comments.twikoo.envId) { %>
+<div class="post-comments">
+  <div class="section-header">
+    <span class="section-label">COMMENTS</span>
+    <h3 class="section-title">评论区</h3>
+  </div>
+  <div id="twikoo"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.13/dist/twikoo.all.min.js" integrity="sha384-gx/djtjVrmrakPOiSOMOo9lJtaO1SHYvIf8rsTh1effe6s/uy91OMOQaMhXPQkCB" crossorigin="anonymous"></script>
+  <script>
+    twikoo.init({
+      envId: '<%= theme.comments.twikoo.envId %>',
+      el: '#twikoo'
+    });
+  </script>
+</div>
+<% } %>
