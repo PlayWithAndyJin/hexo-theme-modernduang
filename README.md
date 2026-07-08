@@ -1,6 +1,6 @@
 <h1 align="center">Modern Duang</h1>
 
-<p align="center"><img src="logo.png" width="120" alt="logo" /></p>
+<p align="center"><img src="./samples/logo.png" width="120" alt="logo" /></p>
 
 <p align="center">
 <a title="Hexo Version" target="_blank" href="https://hexo.io/zh-cn/"><img alt="Hexo Version" src="https://img.shields.io/badge/Hexo-%3E%3D%206.0-blue?style=flat"></a>
