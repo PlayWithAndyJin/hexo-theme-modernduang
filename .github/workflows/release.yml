@@ -1,0 +1,70 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_notes:
+        description: 'Release 描述文字'
+        required: false
+        default: '新版本发布，包含最新的更新和修复。'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 读取版本号
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "📦 版本号: ${VERSION}"
+
+      - name: 打包项目为 ZIP
+        run: |
+          zip -r ProjectFull.zip . \
+            -x ".git/*" \
+            -x "node_modules/*" \
+            -x ".DS_Store" \
+            -x "ProjectFull.zip"
+          echo "✅ 打包完成: ProjectFull.zip"
+          ls -lh ProjectFull.zip
+
+      - name: 创建 Git Tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          TAG="${{ steps.version.outputs.version }}"
+
+          # 如果 tag 已存在则跳过
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "⚠️ Tag ${TAG} 已存在，跳过创建"
+          else
+            git tag -a "$TAG" -m "Release ${TAG}"
+            git push origin "$TAG"
+            echo "✅ Tag ${TAG} 创建并推送成功"
+          fi
+
+      - name: 创建 GitHub Release 并上传附件
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: Theme ${{ steps.version.outputs.version }}
+          body: |
+            ${{ github.event.inputs.release_notes }}
+
+            ---
+            📦 附件: `ProjectFull.zip` 包含完整项目文件。
+          files: ProjectFull.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
