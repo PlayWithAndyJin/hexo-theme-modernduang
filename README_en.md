@@ -13,7 +13,7 @@
 <a title="Agent Skills" target="_blank" href="https://github.com/PlayWithAndyJin/modernduang-skills"><img alt="Agent Skills" src="https://img.shields.io/badge/skills-2-orange?style=flat"></a>
 </p>
 
-<p align="center"><a href="https://themeblog.andyjin.website">Theme Blog</a> |  <a href="https://theme.andyjin.website">English Instruction</a> | <a href="./README.md">简体中文 README</a> | <a href="https://github.com/PlayWithAndyJin/modernduang-skills">Agent Skills</a></p>
+<p align="center"><a href="https://themeblog.andyjin.website">Theme Blog</a> |  <a href="https://theme.andyjin.website">English Instruction</a> | <a href="./README.md">简体中文 README</a> | <a href="https://theme.andyjin.website/guide/start/ai.html#agent-skills">Agent Skills</a></p>
 
 <p align="center">A clean and elegant <a href="https://hexo.io/">Hexo</a> blog theme with soft claymorphism design style.</p>
 
