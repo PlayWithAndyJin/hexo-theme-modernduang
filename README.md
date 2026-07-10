@@ -13,7 +13,7 @@
 <a title="Agent Skills" target="_blank" href="https://github.com/PlayWithAndyJin/modernduang-skills"><img alt="Agent Skills" src="https://img.shields.io/badge/skills-2-orange?style=flat"></a>
 </p>
 
-<p align="center"><a href="https://themeblog.andyjin.website">主题博客</a> | <a href="https://theme.andyjin.website/zh/index.html">中文指南</a> | <a href="./README_en.md">English README</a> | <a href="https://github.com/PlayWithAndyJin/modernduang-skills">Agent Skills</a></p>
+<p align="center"><a href="https://themeblog.andyjin.website">主题博客</a> | <a href="https://theme.andyjin.website/zh/index.html">中文指南</a> | <a href="./README_en.md">English README</a> | <a href="[https://github.com/PlayWithAndyJin/modernduang-skills](https://theme.andyjin.website/guide/start/ai.html#agent-skills)">Agent Skills</a></p>
 
 <p align="center">一款简洁优雅的 <a href="https://hexo.io/">Hexo</a> 博客主题，采用柔和的 Claymorphism 设计风格。</p>
 
