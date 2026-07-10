@@ -33,6 +33,17 @@ font:
       - Nunito:wght@300;400;500;600;700
       - JetBrains+Mono:wght@400;500
 
+# 访问统计（不蒜子）
+busuanzi:
+  enable: true
+  site_uv: true      # 站点独立访客
+  site_pv: true      # 站点浏览总量
+  page_pv: true      # 页面浏览量
+  # 自定义标签（可选，不填使用默认中文）
+  # site_uv_label: Visitors
+  # site_pv_label: Views
+  # page_pv_label: Reads
+
 # 评论系统（目前仅支持 Twikoo）
 comments:
   enable: true # 评论区全局开关
