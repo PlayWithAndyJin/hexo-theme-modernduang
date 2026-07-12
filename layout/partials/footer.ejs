@@ -105,13 +105,13 @@
             <% } %>
           </div>
         <% } %>
+        <% var footerCustom = theme.footer.custom || ''; %>
+        <% if (footerCustom) { %>
+          <div class="footer-custom">
+            <%- footerCustom %>
+          </div>
+        <% } %>
       </div>
-      <% var footerCustom = theme.footer.custom || ''; %>
-      <% if (footerCustom) { %>
-        <div class="footer-custom">
-          <%- footerCustom %>
-        </div>
-      <% } %>
     </div>
   </div>
 </footer>
