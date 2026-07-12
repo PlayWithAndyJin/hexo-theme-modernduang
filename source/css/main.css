@@ -2113,7 +2113,7 @@ figure.highlight .code code {
   background: var(--bg-main);
   border-radius: var(--radius-md);
   padding: var(--spacing-md);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
   border: none;
 }
 
@@ -2191,7 +2191,7 @@ figure.highlight .code code {
   background: none;
   border: none;
   padding: 0;
-  margin-top: var(--spacing-lg);
+  margin-top: var(--spacing-sm);
 }
 
 #twikoo .tk-input textarea {
