@@ -1069,6 +1069,13 @@ body::after {
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   margin-bottom: var(--spacing-md);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.post-category-top:hover {
+  background: rgba(79, 70, 229, 0.18);
+  transform: translateY(-1px);
 }
 
 .post-category-top svg {
@@ -3862,12 +3869,6 @@ figure.highlight .code code {
   font-size: 13px;
   color: var(--text-muted);
   margin-top: var(--spacing-md);
-  padding-top: var(--spacing-md);
-  border-top: 1px dashed rgba(0, 0, 0, 0.08);
-}
-
-[data-theme="dark"] .footer-custom {
-  border-top-color: rgba(255, 255, 255, 0.08);
 }
 
 .footer-stat-item {
