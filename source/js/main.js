@@ -330,7 +330,28 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.appendChild(backToTop);
 
   window.addEventListener('scroll', function() {
-    backToTop.classList.toggle('visible', window.pageYOffset > 400);
+    var footer = document.querySelector('.site-footer');
+    if (!footer) {
+      backToTop.classList.toggle('visible', window.pageYOffset > 400);
+      return;
+    }
+
+    var footerRect = footer.getBoundingClientRect();
+    var viewportHeight = window.innerHeight;
+    var btnHeight = 48;
+    var gap = 20;
+
+    if (footerRect.top < viewportHeight - gap) {
+      // footer 进入视口，按钮停在 footer 上方
+      var stopTop = footerRect.top - btnHeight - gap;
+      if (stopTop < 0) stopTop = gap;
+      backToTop.style.top = stopTop + 'px';
+      backToTop.classList.add('visible');
+    } else {
+      // footer 未进入视口，按钮固定在右下角
+      backToTop.style.top = '';
+      backToTop.classList.toggle('visible', window.pageYOffset > 400);
+    }
   });
 
   backToTop.addEventListener('click', function() {
