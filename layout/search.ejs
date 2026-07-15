@@ -1,0 +1,128 @@
+<section class="search-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">SEARCH</span>
+      <h2 class="section-title">搜索文章</h2>
+      <p class="section-desc">输入关键词查找内容</p>
+    </div>
+
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="输入关键词搜索..." autocomplete="off">
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  var searchIndex = null;
+  var searchInput = document.getElementById('searchInput');
+  var searchResults = document.getElementById('searchResults');
+
+  // 显示加载状态
+  searchResults.innerHTML = '<div class="search-empty">正在加载搜索索引...</div>';
+
+  // 加载搜索索引
+  fetch('<%- url_for("/search.xml") %>')
+    .then(function(res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.text();
+    })
+    .then(function(xml) {
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(xml, 'text/xml');
+      searchIndex = [];
+      doc.querySelectorAll('entry').forEach(function(entry) {
+        searchIndex.push({
+          title: entry.querySelector('title') ? entry.querySelector('title').textContent : '',
+          url: entry.querySelector('url') ? entry.querySelector('url').textContent : '',
+          content: entry.querySelector('content') ? entry.querySelector('content').textContent : ''
+        });
+      });
+      searchResults.innerHTML = '';
+    })
+    .catch(function() {
+      searchResults.innerHTML = '<div class="search-empty">搜索索引加载失败，请刷新页面重试</div>';
+    });
+
+  // 高亮匹配文本
+  function highlightText(text, query) {
+    if (!query) return text;
+    var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+    return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+  }
+
+  // 获取匹配文本的上下文
+  function getMatchContext(content, query, contextLen) {
+    contextLen = contextLen || 60;
+    var plainText = content.replace(/<[^>]+>/g, '');
+    var idx = plainText.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) {
+      return plainText.substring(0, 120) + (plainText.length > 120 ? '...' : '');
+    }
+    var start = Math.max(0, idx - contextLen);
+    var end = Math.min(plainText.length, idx + query.length + contextLen);
+    var snippet = '';
+    if (start > 0) snippet += '...';
+    snippet += plainText.substring(start, end);
+    if (end < plainText.length) snippet += '...';
+    return snippet;
+  }
+
+  // 搜索函数
+  function doSearch(query) {
+    if (!searchIndex || !query.trim()) {
+      searchResults.innerHTML = '';
+      return;
+    }
+
+    var q = query.toLowerCase();
+    var results = searchIndex.filter(function(item) {
+      return item.title.toLowerCase().indexOf(q) !== -1 ||
+             item.content.toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 20);
+
+    if (results.length === 0) {
+      searchResults.innerHTML = '<div class="search-empty">未找到相关文章</div>';
+      return;
+    }
+
+    var html = '<div class="search-result-list">';
+    results.forEach(function(item) {
+      var titleHighlighted = highlightText(item.title, query);
+      var snippet = '';
+      if (item.title.toLowerCase().indexOf(q) !== -1) {
+        snippet = item.content.replace(/<[^>]+>/g, '').substring(0, 120);
+        if (item.content.length > 120) snippet += '...';
+      } else {
+        snippet = getMatchContext(item.content, q);
+      }
+      var snippetHighlighted = highlightText(snippet, query);
+
+      html += '<a href="' + item.url + '" class="search-result-item">';
+      html += '<h4 class="search-result-title">' + titleHighlighted + '</h4>';
+      html += '<p class="search-result-snippet">' + snippetHighlighted + '</p>';
+      html += '</a>';
+    });
+    html += '</div>';
+
+    searchResults.innerHTML = html;
+  }
+
+  // 防抖搜索
+  var timer = null;
+  searchInput.addEventListener('input', function() {
+    var val = this.value;
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      doSearch(val);
+    }, 300);
+  });
+})();
+</script>
