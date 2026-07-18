@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<html lang="<%= config.language %>" data-theme="<%= theme.dark_mode && theme.dark_mode.default || 'light' %>">
+<html lang="<%= config.language %>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var defaultTheme = '<%= theme.dark_mode && theme.dark_mode.default || "light" %>';
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', defaultTheme);
+      }
+    })();
+  </script>
   <title><%= page.title ? page.title + ' - ' + config.title : config.title %></title>
   <meta name="description" content="<%= config.description || '' %>">
   <meta property="og:title" content="<%= page.title ? page.title + ' - ' + config.title : config.title %>">
@@ -53,7 +66,6 @@
   <!-- Mermaid 支持 - 仅在文章启用了 mermaid 时加载 -->
   <% if (page.mermaid) { %>
     <script>
-      // 延迟加载 mermaid，避免阻塞页面渲染
       function loadMermaid() {
         var script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
@@ -68,7 +80,6 @@
         document.body.appendChild(script);
       }
       
-      // 页面加载完成后再延迟 1 秒加载 mermaid
       window.addEventListener('load', function() {
         setTimeout(loadMermaid, 1000);
       });
